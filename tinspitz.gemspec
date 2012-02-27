@@ -1,22 +1,19 @@
-require_relative './lib/tinspitz/versions'
 Gem::Specification.new do |gem|
   gem.authors       = ["James Gifford"]
   gem.email         = ["james@jamesrgifford.com"]
-  gem.description   = 'tin spitz is an interface for your hardware & software stats.'
+  gem.description   = 'TinSpitz is an interface for your hardware & software stats. Currently Linux only.'
   gem.summary       = %q{ To be filled. }
   gem.homepage      = 'http://github.com/jrgifford/tinspitz'
 
   gem.executables   = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  gem.files         = `git ls-files`.split("\n")
+  gem.files         = ["lib/tinspitz.rb"]
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "tinspitz"
-  gem.require_paths = ["lib"]
-  gem.version       = TinSpitz::VERSION
+  gem.version       = "0.1.9"
 
   if RUBY_PLATFORM =~ /1\.8/
     gem.add_dependency 'backports', '2.3.0'
   end
-  
   gem.add_development_dependency 'require_relative', '1.0.3'
   gem.add_development_dependency 'minitest', '2.6.2'
   gem.add_development_dependency 'yard', '0.7.3'
@@ -25,5 +22,3 @@ Gem::Specification.new do |gem|
   gem.add_dependency 'rack', '1.3.5'
   gem.add_dependency 'facter', '1.6.2'
 end
-
-
