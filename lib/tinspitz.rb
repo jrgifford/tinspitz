@@ -1,6 +1,7 @@
 require 'facter'
 
 class TinSpitz
+  # I suggest you look at test/test_tinspitz.rb for examples, there are some good ones there.
   def self.system_version
     Facter.lsbdistrelease
   end
