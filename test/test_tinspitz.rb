@@ -46,4 +46,8 @@ class TinspitzTest < Test::Unit::TestCase
   def test_netmask
     assert_equal Facter.netmask, TinSpitz.netmask
   end
+
+  def test_hostname
+    assert_equal Facter.hostname, TinSpitz.hostname
+  end
 end 

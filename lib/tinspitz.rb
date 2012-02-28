@@ -45,6 +45,10 @@ class TinSpitz
   def self.netmask
     Facter.netmask
   end
+
+  def self.hostname
+    Facter.hostname
+  end
 end
 
 #puts TinSpitz::family
