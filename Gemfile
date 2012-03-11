@@ -1,4 +1,4 @@
 source :rubygems
-source "http://downloads.puppetlabs.com/gems/"
+#source "http://downloads.puppetlabs.com/gems/"
 
 gemspec
