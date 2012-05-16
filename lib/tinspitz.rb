@@ -49,6 +49,15 @@ class TinSpitz
   def self.hostname
     Facter.hostname
   end
+  
+  def self.domainname
+    Facter.fqdn
+  end
+
+  def self.current_user
+    Facter.id
+  end
+
 end
 
 #puts TinSpitz::family

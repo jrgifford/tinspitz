@@ -50,4 +50,13 @@ class TinspitzTest < Test::Unit::TestCase
   def test_hostname
     assert_equal Facter.hostname, TinSpitz.hostname
   end
+  
+  def test_current_user
+    assert_equal Facter.id, TinSpitz.current_user
+  end
+
+  def test_domain_name
+    assert_equal Facter.fqdn, TinSpitz.domainname
+  end
+
 end 
