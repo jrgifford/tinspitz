@@ -58,6 +58,25 @@ class TinSpitz
     Facter.id
   end
 
+  def self.hardwaremodel
+    Facter.hardwaremodel
+  end
+
+  def self.kernelmajorv
+    Facter.kernelmajversion
+  end
+
+  def self.swap
+    Facter.swapsize
+  end
+
+  def self.swapfree
+    Facter.swapfree
+  end
+
+  def self.timezone
+    Facter.timezone
+  end
 end
 
 #puts TinSpitz::family

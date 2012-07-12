@@ -1,8 +1,8 @@
-require 'test/unit'
+require 'minitest/autorun'
 require_relative '../lib/tinspitz.rb'
 require 'facter'
 
-class TinspitzTest < Test::Unit::TestCase
+class TinspitzTest < MiniTest::Unit::TestCase
   def test_system_version
     assert_equal Facter.lsbdistrelease, TinSpitz::system_version
   end
@@ -59,4 +59,23 @@ class TinspitzTest < Test::Unit::TestCase
     assert_equal Facter.fqdn, TinSpitz.domainname
   end
 
+  def test_hardwaremodel
+    assert_equal Facter.hardwaremodel, TinSpitz.hardwaremodel
+  end
+
+  def test_kernel_majorv
+    assert_equal Facter.kernelmajversion, TinSpitz.kernelmajorv
+  end
+
+  def test_swap
+    assert_equal Facter.swapsize, TinSpitz.swap
+  end
+
+  def test_swapfree
+    assert_equal Facter.swapfree, TinSpitz.swapfree
+  end
+
+  def test_timezone
+    assert Facter.timezone, TinSpitz.timezone
+  end
 end 

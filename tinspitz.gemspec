@@ -9,12 +9,15 @@ Gem::Specification.new do |gem|
   gem.files         = ["lib/tinspitz.rb"]
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "tinspitz"
-  gem.version       = "0.2.0"
+  gem.version       = "0.3.0"
 
   if RUBY_PLATFORM =~ /1\.8/
     gem.add_dependency 'backports', '2.3.0'
   end
   gem.add_development_dependency 'require_relative', '1.0.3'
   gem.add_development_dependency 'rake', '0.9.2.2'
+  gem.add_development_dependency 'guard', '1.2.3'
+  gem.add_development_dependency 'guard-minitest', '0.5.0'
   gem.add_dependency 'facter', '1.6.2'
+  gem.add_dependency 'minitest', '3.2.0'
 end
