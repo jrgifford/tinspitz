@@ -77,6 +77,18 @@ class TinSpitz
   def self.timezone
     Facter.timezone
   end
+
+  def self.rubyversion
+    Facter.rubyversion
+  end
+
+  def self.uptime
+    Facter.uptime
+  end
+
+  def self.arch
+    Facter.architecture
+  end
 end
 
 #puts TinSpitz::family

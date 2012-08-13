@@ -78,4 +78,16 @@ class TinspitzTest < MiniTest::Unit::TestCase
   def test_timezone
     assert Facter.timezone, TinSpitz.timezone
   end
+
+  def test_rubyversion
+    assert Facter.rubyversion, TinSpitz.rubyversion
+  end
+
+  def test_uptime
+    assert Facter.uptime, TinSpitz::uptime
+  end
+
+  def test_architecture
+    assert Facter.architecture, TinSpitz.arch
+  end
 end 
