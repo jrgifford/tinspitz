@@ -9,7 +9,7 @@ Gem::Specification.new do |gem|
   gem.files         = ["lib/tinspitz.rb"]
   gem.test_files    = `git ls-files -- {test,spec,features}/*`.split("\n")
   gem.name          = "tinspitz"
-  gem.version       = "0.3.0"
+  gem.version       = "1.0.0"
 
   if RUBY_PLATFORM =~ /1\.8/
     gem.add_dependency 'backports', '2.3.0'

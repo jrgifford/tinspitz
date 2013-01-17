@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tinspitz (0.3.0)
+    tinspitz (1.0.0)
       facter (= 1.6.2)
       minitest (= 3.2.0)
 
